@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" defer></script> -->
+    <title>Dojo's Page</title>
+</head>
+<body id="one">
+    <wrapper class="dojo_page">
+        <div class="new_dojo">
+            <form action="/dojos/create" method="POST">
+                <p>New Dojo</p>
+                <label>
+                    Name:
+                    <input type="text" name="name">
+                </label>
+                <input type="submit" value="create">
+            </form>
+        </div>
+        <div class="all_dojo">
+            <table  class="dojo_table">
+                <tr>
+                    <th>Name</th>
+                </tr>
+                <p>All Dojos</p>
+                {% for dojo in dojos_all %}
+                <tr>
+                    <td><a href="/ninja_list/{{dojo.id}}/dojo_location">{{ dojo.name }}</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            <button onclick="window.location.href='/ninjas/read'">Add Ninja</button>
+        </div>
+    </wrapper>
+</body>
+</html>
+
+<!-- Format for adding images -->
+<!-- <img src="{{ url_for('static', filename='images/img.png') }}"> -->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" defer></script> -->
+    <title>Show Dojo</title>
+</head>
+<body id="three">
+    <wrapper class="show_dojo">
+        <h1>Welcome to {{ninja_home.name}} Page!</h1>
+        <table class="view_dojo">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>age</th>
+                <th>Created On</th>
+                <th>Dojo: </th>
+            </tr>
+            {% for ninja in ninja_home.ninjas %}
+            <tr>
+                <td class="first_nameja">{{ ninja.first_name }}</td>
+                <td class="last_nameja">{{ ninja.last_name }}</td>
+                <td class="ageja">{{ ninja.age }}</td>
+                <td class="createdja">{{ ninja.created_at }}</td>
+                <td class="doja">{{ ninja.dojos_id }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <button onclick="window.location.href='/'" class="dojo_button">Home</button>
+    </wrapper>
+</body>
+</html>
+
+<!-- Format for adding images -->
+<!-- <img src="{{ url_for('static', filename='images/img.png') }}"> -->

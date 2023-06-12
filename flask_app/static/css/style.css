@@ -1,0 +1,138 @@
+/* Dojo Home Page */
+
+#one {
+    background-image: url("https://i.pinimg.com/originals/5d/bb/59/5dbb5981d35c7a1c6e15696b5eff0e6b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.dojo_page {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dojo_add {
+    font-size: 20pt;
+}
+
+p {
+    font-size: 42pt;
+}
+
+.new_dojo {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+}
+
+.all_dojo {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.dojo_table {
+    display: flex;
+    justify-content: center;
+}
+
+th {
+    font-size: 24pt;
+    text-decoration: underline;
+}
+
+a {
+    font-size: 20pt;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+button {
+    margin-top: 40px;
+}
+
+
+.view_dojo, .new_ninja {
+    display: inline-block;
+}
+
+
+
+
+/* New Ninja Page */
+
+#two {
+    background-image: url("/static/images/dojo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+.add_user {
+    display: block;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20pt;
+    padding: 80px;
+    margin: 50px;
+
+}
+
+.enter_ninja {
+    display: block;
+    padding: 10px;
+}
+
+
+.dropdown { 
+    display: inline-block; 
+    position: relative; 
+} 
+
+
+
+
+
+/* Show Dojo Page */
+
+#three {
+    background-image: url("/static/images/the kid.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.show_dojo {
+    display: block;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 38pt;
+    padding: 80px;
+    margin: 50px;
+}
+
+.view_dojo {
+    display: flex;
+    align-items: center;
+    color: white;
+    -webkit-text-stroke: 3px black;
+    font-weight: bold;
+    padding: 30px;
+    margin: 30px;
+}
+
+.first_nameja, .last_nameja, .ageja, .createdja, .doja {
+    padding: 20px;
+}
+
+
+.dojo_button {
+    font-size: 24pt;
+}
